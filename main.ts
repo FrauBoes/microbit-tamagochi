@@ -1,12 +1,12 @@
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     timer = 0
     basic.showIcon(IconNames.Surprised)
-    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Ode), music.PlaybackMode.UntilDone)
+    music.play(music.builtinPlayableSoundEffect(soundExpression.twinkle), music.PlaybackMode.UntilDone)
 })
 input.onGesture(Gesture.Shake, function () {
     timer = 0
     basic.showIcon(IconNames.Happy)
-    music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Entertainer), music.PlaybackMode.UntilDone)
+    music.play(music.builtinPlayableSoundEffect(soundExpression.giggle), music.PlaybackMode.UntilDone)
 })
 let timer = 0
 basic.showLeds(`
@@ -21,19 +21,18 @@ basic.forever(function () {
     timer += 1
     if (timer >= 10) {
         basic.showIcon(IconNames.Sad)
-        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Funeral), music.PlaybackMode.UntilDone)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
     }
     if (timer >= 20) {
         basic.showIcon(IconNames.Asleep)
-        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Blues), music.PlaybackMode.UntilDone)
+        music.play(music.builtinPlayableSoundEffect(soundExpression.yawn), music.PlaybackMode.UntilDone)
     }
     if (timer >= 30) {
-        basic.showIcon(IconNames.Asleep)
-        music._playDefaultBackground(music.builtInPlayableMelody(Melodies.Dadadadum), music.PlaybackMode.UntilDone)
-        while (true) {
-        	
-        }
+        music.play(music.builtinPlayableSoundEffect(soundExpression.mysterious), music.PlaybackMode.UntilDone)
         music.setBuiltInSpeakerEnabled(false)
         basic.showIcon(IconNames.Heart)
+        while (true) {
+            basic.showIcon(IconNames.Skull)
+        }
     }
 })

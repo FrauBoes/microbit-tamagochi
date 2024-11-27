@@ -1,10 +1,11 @@
 {
-    "name": "my-first-project",
+    "name": "microbit-tamagochi",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "neopixel": "github:microsoft/pxt-neopixel#v0.7.6"
     },
     "files": [
         "main.blocks",
