@@ -30,7 +30,6 @@ basic.forever(function () {
     if (timer >= 30) {
         music.play(music.builtinPlayableSoundEffect(soundExpression.mysterious), music.PlaybackMode.UntilDone)
         music.setBuiltInSpeakerEnabled(false)
-        basic.showIcon(IconNames.Heart)
         while (true) {
             basic.showIcon(IconNames.Skull)
         }
